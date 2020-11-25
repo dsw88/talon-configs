@@ -4,7 +4,6 @@ app: iTerm2
 tag(): terminal
 tag(): user.file_manager
 tag(): user.git
-tag(): user.kubectl
 tag(): user.tabs
 
 # Window management
