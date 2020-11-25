@@ -88,23 +88,6 @@ class Actions:
 
 @ctx.action_class("user")
 class user_actions:
-    # snippet.py support beginHelp close
-    def snippet_search(text: str):
-        actions.user.vscode("Insert Snippet")
-        actions.insert(text)
-
-    def snippet_insert(text: str):
-        """Inserts a snippet"""
-        actions.user.vscode("Insert Snippet")
-        actions.insert(text)
-        actions.key("enter")
-
-    def snippet_create():
-        """Triggers snippet creation"""
-        actions.user.vscode("Preferences: Configure User Snippets")
-
-    # snippet.py support end
-
     def tab_jump(number: int):
         if number < 10:
             if is_mac:

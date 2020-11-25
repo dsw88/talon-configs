@@ -1,5 +1,5 @@
 os: mac
-app: /jetbrains/
+app.bundle: /jetbrains/
 -
 tag(): user.line_commands
 tag(): user.multiple_cursors

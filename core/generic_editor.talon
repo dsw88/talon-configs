@@ -181,6 +181,7 @@ cut line:
     edit.select_line()
     edit.cut()
 
+# TODO - Do these two commands really belong in generic_editor?
 punch:
     edit.line_end()
     insert(',')
@@ -188,3 +189,6 @@ punch:
 
 dizzle:
 	insert(" = ")
+
+nope: key(cmd-z)
+yep: key(cmd-shift-z)
