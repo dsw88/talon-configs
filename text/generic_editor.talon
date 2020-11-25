@@ -143,19 +143,6 @@ clear way down:
 copy all:
     edit.select_all()
     edit.copy()
-#to do: do we want these variants, seem to conflict
-# copy left:
-#      edit.extend_left()
-#      edit.copy()
-# copy right:
-#     edit.extend_right()
-#     edit.copy()
-# copy up:
-#     edit.extend_up()
-#     edit.copy()
-# copy down:
-#     edit.extend_down()
-#     edit.copy()
 
 copy word:
     edit.select_word()
@@ -177,19 +164,6 @@ copy line:
 cut everything:
     edit.select_all()
     edit.cut()
-#to do: do we want these variants
-# cut left:
-#      edit.select_all()
-#      edit.cut()
-# cut right:
-#      edit.select_all()
-#      edit.cut()
-# cut up:
-#      edit.select_all()
-#     edit.cut()
-# cut down:
-#     edit.select_all()
-#     edit.cut()
 
 cut word:
     edit.select_word()
