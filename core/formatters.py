@@ -7,8 +7,8 @@ ctx = Context()
 key = actions.key
 edit = actions.edit
 
-words_to_keep_lowercase = "a,an,the,at,by,for,in,is,of,on,to,up,and,as,but,or,nor".split(
-    ","
+words_to_keep_lowercase = (
+    "a,an,the,at,by,for,in,is,of,on,to,up,and,as,but,or,nor".split(",")
 )
 
 # last_phrase has the last phrase spoken, WITHOUT formatting.
@@ -122,6 +122,7 @@ formatters_dict = {
         NOSEP,
         first_vs_rest(lambda w: w.lower(), lambda w: "_" + w.lower()),
     ),
+    "CONSTANT": {NOSEP, first_vs_rest(lambda w: w.upper(), lambda w: "_" + w.upper())},
     "NO_SPACES": (NOSEP, every_word(lambda w: w)),
     "DASH_SEPARATED": words_with_joiner("-"),
     "TERMINAL_DASH_SEPARATED": (
@@ -144,9 +145,6 @@ formatters_dict = {
         if i == 0 or word not in words_to_keep_lowercase
         else word,
     ),
-    "FIRST_THREE": (NOSEP, lambda i, word, _: word[0:3]),
-    "FIRST_FOUR": (NOSEP, lambda i, word, _: word[0:4]),
-    "FIRST_FIVE": (NOSEP, lambda i, word, _: word[0:5]),
 }
 
 # This is the mapping from spoken phrases to formatters
@@ -154,6 +152,7 @@ formatters_words = {
     "allcaps": formatters_dict["ALL_CAPS"],
     "alldown": formatters_dict["ALL_LOWERCASE"],
     "camel": formatters_dict["PRIVATE_CAMEL_CASE"],
+    "constant": formatters_dict["CONSTANT"],
     "dotted": formatters_dict["DOT_SEPARATED"],
     "dubstring": formatters_dict["DOUBLE_QUOTED_STRING"],
     "dunder": formatters_dict["DOUBLE_UNDERSCORE"],
@@ -161,18 +160,12 @@ formatters_words = {
     "kebab": formatters_dict["DASH_SEPARATED"],
     "packed": formatters_dict["DOUBLE_COLON_SEPARATED"],
     "padded": formatters_dict["SPACE_SURROUNDED_STRING"],
-    # "say": formatters_dict["NOOP"],
     "sentence": formatters_dict["CAPITALIZE_FIRST_WORD"],
     "slasher": formatters_dict["SLASH_SEPARATED"],
     "smash": formatters_dict["NO_SPACES"],
     "snake": formatters_dict["SNAKE_CASE"],
-    # "speak": formatters_dict["NOOP"],
     "string": formatters_dict["SINGLE_QUOTED_STRING"],
     "title": formatters_dict["CAPITALIZE_ALL_WORDS"],
-    # disable a few formatters for now
-    # "tree": formatters_dict["FIRST_THREE"],
-    # "quad": formatters_dict["FIRST_FOUR"],
-    # "fiver": formatters_dict["FIRST_FIVE"],
 }
 
 all_formatters = {}
@@ -300,7 +293,9 @@ def gui(gui: imgui.GUI):
     gui.text("List formatters")
     gui.line()
     for name in sorted(set(formatters_words.keys())):
-        gui.text(f"{name} | {format_phrase_no_history(['one', 'two', 'three'], name)}")
+        gui.text(
+            f"{name} | {format_phrase_no_history(['Be', 'good', 'to', 'yourself'], name)}"
+        )
 
 
 @imgui.open(software=False)
