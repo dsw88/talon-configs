@@ -6,51 +6,64 @@ tag(): user.multiple_cursors
 tag(): user.splits
 tag(): user.tabs
 
+# Navigation
 palette: key(cmd-shift-a)
+(action | please) <user.text>:
+  key(cmd-shift-a)
+  insert(text)
 files: key(cmd-shift-o)
-wide: key(alt-up)
-skinny: key(alt-down)
-snippets: key(cmd-j)
-pop error: key(cmd-f1)
 last: key(ctrl-tab)
-import that: key(alt-enter)
+go there: key(cmd-b)
+go back: key(cmd-[)
+go forward: key(cmd-])
+recent: key(cmd-e)
+go next (method | function): key(ctrl-shift-down)
+go last (method | function): key(ctrl-shift-up)
+go next (error | air): key(f2)
+go last (error | air): key(shift-f2)
 
-vim save:
-  key(:)
-  key(w)
-  key(enter)
-
+# Snippets
+create snippet: key(cmd-ctrl-alt-shift-t)
+snippets: key(cmd-j)
 beam <user.text>:
     key(cmd-j)
     sleep(200ms)
     insert(text)
 
-#talon app actions (+custom tab actions)
+# Fixes/inspections
+pop error: key(cmd-f1)
+import that: key(alt-enter)
+pop type: key(ctrl-shift-p)
+pop parameters: key(cmd-p)
+
+# Editor
+vim save:
+  key(:)
+  key(w)
+  key(enter)
+
+# Tab overrides
 action(app.tab_next): key(cmd-shift-])
 action(app.tab_previous): key(cmd-shift-[)
-
 action(app.tab_close): key(cmd-w)
 action(app.tab_reopen): key(cmd-shift-w)
 action(code.toggle_comment): key(cmd-/)
 
-#talon edit actions
+# Text Selection
+wide: key(alt-up)
+skinny: key(alt-down)
+
+# Edit overrides
 action(edit.find_next): key(cmd-g)
 # action(edit.find_previous): user.idea("action FindPrevious")
 # action(edit.find): user.idea("action Find")
 # action(edit.line_clone):  user.idea("action EditorDuplicate")
-# action(edit.line_swap_down):  user.idea("action MoveLineDown")
-# action(edit.line_swap_up):  user.idea("action MoveLineUp")
-# action(edit.indent_more): user.idea("action EditorIndentLineOrSelection")
-# action(edit.indent_less): user.idea("action EditorUnindentSelection")
-# action(edit.select_line): user.idea("action EditorSelectLine")
-# action(edit.select_word): user.idea("action EditorSelectWord")
-# action(edit.select_all): user.idea("action $SelectAll")
-# action(edit.file_start): user.idea("action EditorTextStart")
-# action(edit.file_end): user.idea("action EditorTextEnd")
-# action(edit.extend_file_start): user.idea("action EditorTextStartWithSelection")
-# action(edit.extend_file_end): user.idea("action EditorTextEndWithSelection")
+action(edit.line_swap_down):  key(alt-shift-down)
+action(edit.line_swap_up): key(alt-shift-up)
+action(edit.indent_more): key(ctrl-cmd-alt-tab)
+action(edit.indent_less): key(ctrl-cmd-alt-shift-tab)
 
-# splits.py support begin
+# Splits overrides
 action(user.split_clear_all): key(cmd-alt-ctrl-shift-u)
 action(user.split_clear): key(cmd-alt-ctrl-u)
 action(user.split_last): key(alt-shift-tab)
@@ -58,22 +71,13 @@ action(user.split_next): key(alt-tab)
 action(user.split_window_horizontally): key(cmd-alt-ctrl-h)
 action(user.split_window_vertically): key(cmd-alt-ctrl-v)
 action(user.split_window): user.idea("action EditSourceInNewWindow")
-# splits.py support end
 
-# multiple_cursors.py support begin
+# Multiple cursor overrides
 action(user.multi_cursor_add_above): key(cmd-alt-ctrl-up)
 action(user.multi_cursor_add_below): key(cmd-alt-ctrl-down)
 action(user.multi_cursor_disable): key(escape)
 action(user.multi_cursor_enable): key(shift-alt-insert)
 action(user.multi_cursor_select_all_occurrences): key(ctrl-cmd-g)
-# action(user.multi_cursor_select_fewer_occurrences): user.idea("action UnselectPreviousOccurrence")
-# action(user.multi_cursor_select_more_occurrences): user.idea("action SelectNextOccurrence")
-# multiple_cursors.py support end
-
-# Copying
-(action | please) <user.text>:
-  key(cmd-shift-a)
-  insert(text)
 
 # Refactoring
 refactor: key(ctrl-shift-cmd-alt-r)
@@ -83,46 +87,11 @@ extract constant: key(alt-cmd-c)
 extract parameter: key(alt-cmd-p)
 extract method: key(alt-cmd-m)
 
-# navigation
-# (go declaration | follow): user.idea("action GotoDeclaration")
-# go implementation: user.idea("action GotoImplementation")
-# go usage: user.idea("action FindUsages")
-# go type: user.idea("action GotoTypeDeclaration")
-# go test: user.idea("action GotoTest")
-go back: key(cmd-[)
-go forward: key(cmd-])
-
 # Search
 # find (everywhere | all): user.idea("action SearchEverywhere")
-recent: key(cmd-e)
 
-# create (template|snippet): user.idea("action SaveAsTemplate")
-
-# # miscellaneous
-# # XXX These might be better than the structural ones depending on language.
-# go next (method | function): user.idea("action MethodDown")
-# go last (method | function): user.idea("action MethodUp")
-
-# Tool windows:
-# Toggling various tool windows
+# Toggles for views/etc
 toggle project: key(cmd-1)
 toggle find: key(cmd-3)
-
-# Pin/dock/float
+toggle git: key(cmd-9)
 toggle comment: code.toggle_comment()
-
-# Quick popups
-# (pop deaf | toggle definition): user.idea("action QuickImplementations")
-# pop type: user.idea("action ExpressionTypeInfo")
-# pop parameters: user.idea("action ParameterInfo")
-
-# Movement
-# go next (error | air): user.idea("action GotoNextError")
-# go last (error | air): user.idea("action GotoPreviousError")
-# fix next (error | air):
-#   user.idea("action GotoNextError")
-#   user.idea("action ShowIntentionActions")
-# fix last (error | air):
-#   user.idea("action GotoPreviousError")
-#   user.idea("action ShowIntentionActions")
-
