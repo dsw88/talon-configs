@@ -8,9 +8,6 @@ spotlight: key(cmd-space)
 desktop next: key(ctrl-right)
 desktop last: key(ctrl-left)
 
-# copy clip commands
-clipboard: key(shift-alt-space)
-
 # Manage computer
 computer lock:
 	speech.disable()
