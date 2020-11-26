@@ -1,14 +1,7 @@
-import re
-
 from talon import Context, Module, actions, settings
 
 mod = Module()
 ctx = Context()
-ctx.matches = r"""
-mode: user.python
-mode: command
-and code.language: python
-"""
 
 
 @mod.action_class
