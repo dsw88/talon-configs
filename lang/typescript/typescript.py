@@ -80,4 +80,3 @@ class user_actions:
     #     )
 
     #     actions.user.code_insert_function(result, None)
-

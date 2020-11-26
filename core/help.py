@@ -123,8 +123,7 @@ def get_current_context_page_length() -> int:
 
 
 def get_command_line_count(command: Tuple[str, str]) -> int:
-    """This should be kept in sync with draw_commands
-    """
+    """This should be kept in sync with draw_commands"""
     _, body = command
     lines = len(body.split("\n"))
     if lines == 1:
@@ -619,4 +618,3 @@ def commands_updated(_):
 
 
 app.register("launch", refresh_context_command_map)
-

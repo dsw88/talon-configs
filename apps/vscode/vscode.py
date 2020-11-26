@@ -206,4 +206,3 @@ class user_actions:
         actions.key("esc")
 
     # find_and_replace.py support end
-

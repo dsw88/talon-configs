@@ -165,4 +165,3 @@ class Actions:
         )
         app.notify(error)
         raise error
-

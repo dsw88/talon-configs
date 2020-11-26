@@ -44,7 +44,17 @@ _word_map_defaults = {
 }
 
 # Default words that should be added to Talon's vocabulary.
-_simple_vocab_default = ["nmap", "admin", "Cisco", "Citrix", "VPN", "DNS", "Minecraft", "json", "artifactory"]
+_simple_vocab_default = [
+    "nmap",
+    "admin",
+    "Cisco",
+    "Citrix",
+    "VPN",
+    "DNS",
+    "Minecraft",
+    "json",
+    "artifactory",
+]
 
 # Defaults for different pronounciations of words that need to be added to
 # Talon's vocabulary.

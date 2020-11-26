@@ -199,4 +199,3 @@ def ui_event(event, arg):
 ctx.lists["user.launch"] = {}
 update_launch_list()
 ui.register("", ui_event)
-
