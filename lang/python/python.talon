@@ -5,6 +5,8 @@ and code.language: python
 # Keywords
 pass: insert("pass")
 return: insert("return ")
+break: insert("break")
+continue: insert("continue")
 self: insert("self")
 in it: insert("__init__")
 raise: insert("raise ")
@@ -56,6 +58,7 @@ while: user.invoke_live_template("twhl")
 with: user.invoke_live_template("twth")
 with open: user.invoke_live_template("twthopn")
 format string: user.invoke_live_template("tfstr")
+list comprehension: user.invoke_live_template("compl")
 
 # TODO
 # Something for calling functions with snake_case formatting

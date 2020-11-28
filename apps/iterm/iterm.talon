@@ -96,6 +96,10 @@ keep alive:
 pip install:
 	insert("pip install ")
 
+pip list: 
+	insert("pip list")
+	key(enter)
+
 compose:
 	key(cmd-shift-.)
 

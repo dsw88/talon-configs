@@ -1,5 +1,3 @@
-# XXX - would be nice to be able pipe these through formatters
-
 from talon import Context, Module
 
 mod = Module()
