@@ -6,6 +6,9 @@ tag(): user.multiple_cursors
 tag(): user.splits
 tag(): user.tabs
 
+# editor commands
+new item: key(cmd-n)
+
 # Navigation
 palette: key(cmd-shift-a)
 (action | please) <user.text>:
