@@ -96,6 +96,10 @@ keep alive:
 pip install:
 	insert("pip install ")
 
+pip install requirements:
+	insert("pip install -r requirements.txt")
+	key(enter)	
+
 pip list: 
 	insert("pip list")
 	key(enter)
