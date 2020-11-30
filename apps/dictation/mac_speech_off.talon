@@ -1,4 +1,5 @@
 #defines the various mode commands
+os: mac
 mode: user.macspeech
 -
 ^speech off$:
