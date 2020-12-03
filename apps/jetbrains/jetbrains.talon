@@ -6,6 +6,9 @@ tag(): user.multiple_cursors
 tag(): user.splits
 tag(): user.tabs
 
+# editor commands
+new item: key(cmd-n)
+
 # Navigation
 palette: key(cmd-shift-a)
 (action | please) <user.text>:
@@ -21,6 +24,10 @@ go next (method | function): key(ctrl-shift-down)
 go last (method | function): key(ctrl-shift-up)
 go next (error | air): key(f2)
 go last (error | air): key(shift-f2)
+
+# Search
+search file: key(cmd-f)
+search project: key(cmd-shift-f)
 
 # Snippets
 create snippet: key(cmd-ctrl-alt-shift-t)
