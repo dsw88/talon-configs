@@ -1,34 +1,40 @@
-os: windows
+os: mac
 -
 action(app.preferences):
-	key(ctrl-,)
+	key(cmd-,)
 
 action(app.tab_close):
-	key(ctrl-w)
-	
+	key(cmd-w)
+
 #action(app.tab_detach):
 #  Move the current tab to a new window
-  
+
 action(app.tab_next):
-	key(ctrl-tab)
-	
+	key(cmd-alt-right)
+
 action(app.tab_open):
-	key(ctrl-t)
-	
+	key(cmd-t)
+
 action(app.tab_previous):
-	key(ctrl-shift-tab)
-	
+	key(cmd-alt-left)
+
 action(app.tab_reopen):
-	key(ctrl-shift-t)
-	
+	key(cmd-shift-t)
+
 action(app.window_close):
-	key(ctrl-shift-w)
-	
+	key(cmd-w)
+
+action(app.window_hide):
+	key(cmd-m)
+
+action(app.window_hide_others):
+	key(cmd-option-h)
+
 action(app.window_next):
-	key(alt-tab)
+	key(cmd-`)
 
 action(app.window_open):
-	key(ctrl-n)
-	
+	key(cmd-n)
+
 action(app.window_previous):
-	key(alt-shift-tab)
+	key(cmd-shift-`)
