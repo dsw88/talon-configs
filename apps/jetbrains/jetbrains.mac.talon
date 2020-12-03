@@ -43,12 +43,6 @@ import that: key(alt-enter)
 pop type: key(ctrl-shift-p)
 pop parameters: key(cmd-p)
 
-# Editor
-vim save:
-  key(:)
-  key(w)
-  key(enter)
-
 # Tab overrides
 action(app.tab_next): key(cmd-shift-])
 action(app.tab_previous): key(cmd-shift-[)
@@ -102,3 +96,10 @@ toggle project: key(cmd-1)
 toggle find: key(cmd-3)
 toggle git: key(cmd-9)
 toggle comment: code.toggle_comment()
+
+# Overrides for Jetbrains
+action(edit.file_start):
+	key(cmd-home)
+
+action(edit.file_end):
+	key(cmd-end)

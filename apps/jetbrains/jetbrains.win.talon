@@ -43,12 +43,6 @@ import that: key(alt-enter)
 pop type: key(ctrl-shift-p)
 pop parameters: key(ctrl-p)
 
-# Editor
-vim save:
-  key(:)
-  key(w)
-  key(enter)
-
 # Tab overrides
 action(app.tab_next): key(alt-right)
 action(app.tab_previous): key(alt-left)
