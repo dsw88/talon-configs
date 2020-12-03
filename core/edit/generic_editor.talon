@@ -181,14 +181,10 @@ cut line:
     edit.select_line()
     edit.cut()
 
-# TODO - Do these two commands really belong in generic_editor?
 punch:
     edit.line_end()
     insert(',')
     key(enter)
 
-dizzle:
-	insert(" = ")
-
-nope: key(cmd-z)
-yep: key(cmd-shift-z)
+nope: edit.undo()
+yep: edit.redo()

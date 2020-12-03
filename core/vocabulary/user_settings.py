@@ -6,9 +6,7 @@ from typing import Dict, List, Tuple
 import threading
 
 
-# NOTE: This method requires this module to be one folder below the top-level
-#   knausj folder.
-SETTINGS_DIR = Path(__file__).parents[1] / "settings"
+SETTINGS_DIR = Path(__file__).parents[2] / "settings"
 
 if not SETTINGS_DIR.is_dir():
     os.mkdir(SETTINGS_DIR)
