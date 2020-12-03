@@ -5,6 +5,7 @@ mod = Module()
 modes = {
     "presentation": "a more strict form of sleep where only a more strict wake up command works",
     "macspeech": "A mode for mac dictation speech mode",
+    "winspeech": "A mode for windows dictation speech mode",
 }
 
 for key, value in modes.items():
