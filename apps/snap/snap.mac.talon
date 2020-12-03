@@ -1,5 +1,6 @@
 os: mac
 -
+# This requires magnet to be installed
 # Snap to half-screen
 snap left: key(ctrl-alt-left)
 snap right: key(ctrl-alt-right)
