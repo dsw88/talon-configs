@@ -25,7 +25,7 @@ boolean: insert("bool")
 
 # Live templates
 create resource: user.invoke_live_template("ttfr")
-create module: user.invoke_live_template("ttfd")
+create module: user.invoke_live_template("ttfm")
 create data: user.invoke_live_template("ttfd")
 create variable: user.invoke_live_template("ttfv")
 create output: user.invoke_live_template("ttfo")

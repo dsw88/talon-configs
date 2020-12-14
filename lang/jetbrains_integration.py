@@ -1,4 +1,5 @@
-from talon import Context, Module, actions, settings
+from talon import Context, Module, actions, settings, ctrl
+import time
 
 mod = Module()
 ctx = Context()
@@ -20,3 +21,9 @@ class JetBrainsIntegration:
         actions.insert(action_name)
         actions.sleep("400ms")
         actions.key("enter")
+
+    def mouse_long_right():
+        """click right mouse button, holding it down a little bit longer"""
+        ctrl.mouse_click(button=1, down=True)
+        time.sleep(0.1)
+        ctrl.mouse_click(button=1, up=True)

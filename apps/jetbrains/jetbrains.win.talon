@@ -89,3 +89,5 @@ extract method: key(ctrl-alt-m)
 toggle project: key(alt-1)
 toggle git: key(alt-9)
 toggle comment: code.toggle_comment()
+
+right click: user.mouse_long_right()

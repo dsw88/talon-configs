@@ -27,6 +27,7 @@ go last (error | air): key(shift-f2)
 
 # Search
 search file: key(cmd-f)
+replace file: key(cmd-r)
 search project: key(cmd-shift-f)
 
 # Snippets
@@ -103,3 +104,5 @@ action(edit.file_start):
 
 action(edit.file_end):
 	key(cmd-end)
+
+right click: user.mouse_long_right()
