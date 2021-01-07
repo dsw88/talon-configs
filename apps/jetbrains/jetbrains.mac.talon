@@ -8,6 +8,7 @@ tag(): user.tabs
 
 # editor commands
 new item: key(cmd-n)
+delete line: key(cmd-backspace)
 
 # Navigation
 palette: key(cmd-shift-a)
@@ -40,7 +41,7 @@ beam <user.text>:
 
 # Fixes/inspections
 pop error: key(cmd-f1)
-import that: key(alt-enter)
+fix that: key(alt-enter)
 pop type: key(ctrl-shift-p)
 pop parameters: key(cmd-p)
 
